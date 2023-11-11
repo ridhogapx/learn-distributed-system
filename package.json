@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "PORT=3000 node server.js",
-    "start:order": "port=4000 node order-service.js",
-    "start:user": "port=5000 node user-service.js"
+    "start:order": "port=3001 node order-service.js",
+    "start:user": "port=3002 node user-service.js"
   },
   "repository": {
     "type": "git",

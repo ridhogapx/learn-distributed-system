@@ -4,7 +4,7 @@ const url = require('url')
 const users = ['John', 'Doe', 'Jane', 'Margarett', 'Mary', 'Lily', 'Amellia'];
 const MSSING = 4;
 
-const server = http.createServer((res, res) => {
+const server = http.createServer((req, res) => {
   const pathname = url.parse(req.url);
   let id = pathname.match(/^\/(\d+)$/);
   

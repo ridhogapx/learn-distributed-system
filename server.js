@@ -1,8 +1,9 @@
 const hapi = require('@hapi/hapi');
+const got = require('got');
 
 const {
-  ORDER_SERVICE = 4000,
-  USER_SERVICE = 5000,
+  ORDER_SERVICE = 3001,
+  USER_SERVICE = 3002,
 } = process.env;
 
 const service = {
@@ -20,13 +21,13 @@ const init = async() => {
     {
       method: 'GET',
       path: '/{id}',
-      hander: async(req, h) => {
+      handler: async(req, h) => {
         const { id } = req.params;
 
         try { 
           const [order, user] = await Promise.all([
             got(`${orderService}/${id}`),
-            got(`${userService/${id}}`),
+            got(`${userService}/${id}`),
           ]);
 
           return {
