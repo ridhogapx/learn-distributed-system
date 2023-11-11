@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/RageNeko26/learn-distributed-system/issues"
   },
-  "homepage": "https://github.com/RageNeko26/learn-distributed-system#readme"
+  "homepage": "https://github.com/RageNeko26/learn-distributed-system#readme",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2"
+  }
 }
